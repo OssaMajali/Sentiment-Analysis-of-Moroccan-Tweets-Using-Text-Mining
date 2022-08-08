@@ -8,6 +8,7 @@ import nltk
 from matplotlib import pyplot as plt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk.sentiment.util import *
+from nltk.tokenize import word_tokenize
 import plotly.express as pp
 import re
 from PIL import Image
@@ -235,7 +236,7 @@ if __name__ == '__main__':
                 # Remove stop words 
                 df['clean_tweet'] = df['clean_tweet'].apply(nfx.remove_stopwords)
                 # Tweets Tokenization:')
-                df['clean_tweet']=df['clean_tweet'].apply(lambda x: nltk.word_tokenize(x))
+                df['clean_tweet']=df['clean_tweet'].apply(lambda x: word_tokenize(x))
                 # Removing short words 
                 df['clean_tweet']=df['clean_tweet'].apply(lambda x:[w for w in x if len(w) >= 3])
                 # Stitch tokens back together 
