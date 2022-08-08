@@ -1,7 +1,6 @@
 import base64
 import numpy as np
 import streamlit as st
-import hydralit_components as hc
 import datetime
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
@@ -11,14 +10,11 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk.sentiment.util import *
 import plotly.express as pp
 import re
-from nltk.stem import WordNetLemmatizer 
-from nltk.corpus import wordnet
-from nltk.corpus import stopwords
 from PIL import Image
-from wordcloud import WordCloud,STOPWORDS,ImageColorGenerator
+from wordcloud import WordCloud,ImageColorGenerator
 from streamlit_option_menu import option_menu
 import neattext.functions as nfx
-from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles
+from htbuilder import HtmlElement, div, br, hr, a, p, img, styles
 from htbuilder.units import percent,px
 
 
