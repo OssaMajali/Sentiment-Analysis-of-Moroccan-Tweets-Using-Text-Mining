@@ -18,8 +18,7 @@ from streamlit_option_menu import option_menu
 import neattext.functions as nfx
 from htbuilder import HtmlElement, div, br, hr, a, p, img, styles
 from htbuilder.units import percent,px
-
-
+nltk.download('punkt')
 
 
 
